@@ -15,5 +15,5 @@
     "ts-node": {
         "esm": true
     },
-    "lib": ["esnext"]
+    "lib": ["esnext"],
 }
