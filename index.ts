@@ -1,4 +1,4 @@
-import { getDatabaseItemCount } from "./utils/dbMetadata";
+import { getDatabaseTableItemCount } from "./utils/dbMetadata";
 import { doSynchronousScan } from "./utils/synchronousScan";
 import { writeDataToCsv } from "./utils/fastcsv";
 
@@ -19,7 +19,7 @@ const params = {
 };
 
 /* EXECUTION */
-const totalNumberOfItemsInTable = await getDatabaseItemCount(tableName);
+const totalNumberOfItemsInTable = await getDatabaseTableItemCount(tableName);
 const responseItems = await doSynchronousScan({ TableName: tableName, ...params }, totalNumberOfItemsInTable);
 
 writeDataToCsv(responseItems, "list.csv", responseItems.length);
