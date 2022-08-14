@@ -22,4 +22,4 @@ const params = {
 const totalNumberOfItemsInTable = await getDatabaseItemCount(tableName);
 const responseItems = await doSynchronousScan({ TableName: tableName, ...params }, totalNumberOfItemsInTable);
 
-writeDataToCsv(responseItems, "./list.csv", responseItems.length);
+writeDataToCsv(responseItems, "list.csv", responseItems.length);

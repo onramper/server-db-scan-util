@@ -21,4 +21,4 @@ There are scenarios in which you'd like to export a filtered set of records from
 ## Instructions
 1. `yarn install` to install the dependencies. (Use Node v16)
 2. Adjust the configuration in `index.ts` as you see fit.
-3. `yarn start` to retrieve the items from DynamoDB and to then save the items to a csv file.
+3. `yarn start` to retrieve the items from DynamoDB and to then save the items to a csv file in the `out` folder.
