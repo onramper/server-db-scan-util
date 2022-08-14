@@ -62,7 +62,9 @@ export async function doSynchronousScan(
   ) {
     await doScan();
   }
-  console.log();
+  // Write a new line to move the cursor to the next line. Else logs will be written to the progress line left by the
+  // `writeToCurrentLine` function calls above.
+  process.stdout.write('\n');
 
   // Unmarshall all items; effectively transforming the AWS formatted objects into plain objects.
   // https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_util_dynamodb.html
