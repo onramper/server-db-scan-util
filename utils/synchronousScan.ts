@@ -2,6 +2,7 @@ import { unmarshall } from "@aws-sdk/util-dynamodb";
 import { DocumentClient, Key } from "aws-sdk/clients/dynamodb";
 import dynamodb from "./dynamodb";
 import { writeToCurrentLine } from "./log";
+import { computeTimeLeft } from "./progress";
 
 // A max string length to avoid long PKs from polluting the console.
 const maxPkLengthInLog = 20;
@@ -24,14 +25,9 @@ export async function doSynchronousScan(
           const percentageDone = Math.round(
             (accScannedCount / totalNumberOfItems) * 100
           );
-          const timeElapsed = performance.now() - startTime;
 
-          // Yes, this is probably unnecessarily computionally expensive.
-          const timeLeftInSeconds = Math.trunc(
-            ((accScannedCount / timeElapsed) *
-              (totalNumberOfItems - accScannedCount)) /
-              1000000
-          );
+          const timeLeftInSeconds = computeTimeLeft(startTime, accScannedCount, totalNumberOfItems);
+
           const pkOfLastEvaluatedKey = res.LastEvaluatedKey?.PK.S;
           const pkOfLastEvaluatedKeyTruncated =
             pkOfLastEvaluatedKey &&
