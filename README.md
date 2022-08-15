@@ -9,7 +9,8 @@
 <p align="center">
   <a href="#introduction">Introduction</a> •
   <a href="#purpose">Purpose</a> •
-  <a href="#instructions">Instructions</a>
+  <a href="#instructions">Instructions</a> •
+  <a href="#license">License</a>
 </p>
 
 ## Introduction
@@ -22,3 +23,6 @@ There are scenarios in which you'd like to export a filtered set of records from
 1. `yarn install` to install the dependencies. (Use Node v16)
 2. Adjust the configuration in `index.ts` as you see fit.
 3. `yarn start` to retrieve the items from DynamoDB and to then save the items to a csv file in the `out` folder.
+
+## License
+This utility is licensed under the [MIT license](LICENSE.md).
