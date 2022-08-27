@@ -2,7 +2,7 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.154.0",
     "@aws-sdk/util-dynamodb": "^3.154.0",
-    "aws-sdk": "^2.1199.0",
+    "aws-sdk": "^2.1204.0",
     "fast-csv": "^4.3.6",
     "ts-node": "^10.9.1"
   },
