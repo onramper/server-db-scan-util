@@ -5,6 +5,11 @@ import { writeToCurrentLine } from './log';
 const CSV_OUTPUT_DIR = 'out';
 
 export function writeDataToCsv(data: fastcsv.FormatterRow[], csvName: string, numberOfItems: number) {
+    if (numberOfItems === 0) {
+     writeToCurrentLine(`Skipped csv export. There are '${numberOfItems}' items to export.\n`);
+     return;
+    }
+
     writeToCurrentLine('Starting to write items to csv...');
 
     // From: https://stackabuse.com/reading-and-writing-csv-files-with-node-js/#usingthefastcsvmodule
@@ -12,5 +17,5 @@ export function writeDataToCsv(data: fastcsv.FormatterRow[], csvName: string, nu
     fastcsv
       .write(data, { headers: true })
       .pipe(ws);
-      writeToCurrentLine(`Finished writing ${numberOfItems} records to '${CSV_OUTPUT_DIR}/${csvName}'.\n`);
+    writeToCurrentLine(`Finished writing ${numberOfItems} records to '${CSV_OUTPUT_DIR}/${csvName}'.\n`);
   }
