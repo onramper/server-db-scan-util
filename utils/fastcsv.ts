@@ -12,6 +12,7 @@ export function writeDataToCsv(data: fastcsv.FormatterRow[], csvName: string, nu
 
     writeToCurrentLine('Starting to write items to csv...');
 
+    fs.mkdirSync(`./${CSV_OUTPUT_DIR}`, { recursive: true }); // Create data output directory if non-existent.
     // From: https://stackabuse.com/reading-and-writing-csv-files-with-node-js/#usingthefastcsvmodule
     const ws = fs.createWriteStream(`./${CSV_OUTPUT_DIR}/${csvName}`);
     fastcsv
