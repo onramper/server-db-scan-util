@@ -2016,24 +2016,22 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@fast-csv/format@4.3.5":
-  version "4.3.5"
-  resolved "https://registry.npmjs.org/@fast-csv/format/-/format-4.3.5.tgz"
-  integrity sha512-8iRn6QF3I8Ak78lNAa+Gdl5MJJBM5vRHivFtMRUWINdevNo00K7OXxS2PshawLKTejVwieIlPmK5YlLu6w4u8A==
+"@fast-csv/format@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fast-csv/format/-/format-5.0.2.tgz#4799c3d3badd7b5d4ed596635a5cf094dd9501a9"
+  integrity sha512-fRYcWvI8vs0Zxa/8fXd/QlmQYWWkJqKZPAXM+vksnplb3owQFKTPPh9JqOtD0L3flQw/AZjjXdPkD7Kp/uHm8g==
   dependencies:
-    "@types/node" "^14.0.1"
     lodash.escaperegexp "^4.1.2"
     lodash.isboolean "^3.0.3"
     lodash.isequal "^4.5.0"
     lodash.isfunction "^3.0.9"
     lodash.isnil "^4.0.0"
 
-"@fast-csv/parse@4.3.6":
-  version "4.3.6"
-  resolved "https://registry.npmjs.org/@fast-csv/parse/-/parse-4.3.6.tgz"
-  integrity sha512-uRsLYksqpbDmWaSmzvJcuApSEe38+6NQZBUsuAyMZKqHxH0g1wcJgsKUvN3WC8tewaqFjBMMGrkHmC+T7k8LvA==
+"@fast-csv/parse@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fast-csv/parse/-/parse-5.0.2.tgz#204000dfd661b580a10a8cd035a0e986fc6954a9"
+  integrity sha512-gMu1Btmm99TP+wc0tZnlH30E/F1Gw1Tah3oMDBHNPe9W8S68ixVHjt89Wg5lh7d9RuQMtwN+sGl5kxR891+fzw==
   dependencies:
-    "@types/node" "^14.0.1"
     lodash.escaperegexp "^4.1.2"
     lodash.groupby "^4.6.0"
     lodash.isfunction "^3.0.9"
@@ -2471,11 +2469,6 @@
   version "18.8.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.8.0.tgz#b8ee8d83a99470c0661bd899417fcd77060682fe"
   integrity sha512-u+h43R6U8xXDt2vzUaVP3VwjjLyOJk6uEciZS8OSyziUQGOwmk+l+4drxcsDboHXwyTaqS1INebghmWMRxq3LA==
-
-"@types/node@^14.0.1":
-  version "14.18.23"
-  resolved "https://registry.npmjs.org/@types/node/-/node-14.18.23.tgz"
-  integrity sha512-MhbCWN18R4GhO8ewQWAFK4TGQdBpXWByukz7cWyJmXhvRuCIaM/oWytGPqVmDzgEnnaIc9ss6HbU5mUi+vyZPA==
 
 "@types/prettier@^2.1.5":
   version "2.7.1"
@@ -3138,13 +3131,13 @@ expect@^29.0.0, expect@^29.4.2:
     jest-message-util "^29.4.2"
     jest-util "^29.4.2"
 
-fast-csv@^4.3.6:
-  version "4.3.6"
-  resolved "https://registry.npmjs.org/fast-csv/-/fast-csv-4.3.6.tgz"
-  integrity sha512-2RNSpuwwsJGP0frGsOmTb9oUF+VkFSM4SyLTDgwf2ciHWTarN0lQTC+F2f/t5J9QjW+c65VFIAAu85GsvMIusw==
+fast-csv@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/fast-csv/-/fast-csv-5.0.2.tgz#2676b7514ff1feb3de0f1c20d49015bae3285c83"
+  integrity sha512-CnB2zYAzzeh5Ta0UhSf32NexLy2SsEsSMY+fMWPV40k1OgaLEbm9Hf5dms3z/9fASZHBjB6i834079gVeksEqQ==
   dependencies:
-    "@fast-csv/format" "4.3.5"
-    "@fast-csv/parse" "4.3.6"
+    "@fast-csv/format" "5.0.2"
+    "@fast-csv/parse" "5.0.2"
 
 fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.1.0:
   version "2.1.0"
